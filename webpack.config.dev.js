@@ -12,7 +12,7 @@ module.exports = merge(baseConfig,{
      publicPath: '/'
   },
   mode: 'development',
-  devServer: {
+  devServer: {                               //webpack server 服务代理接口请求
      historyApiFallback: true,
      inline: true,
      port: 7778,
