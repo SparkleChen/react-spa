@@ -9,6 +9,7 @@ module.exports = merge(baseConfig,{
   output: {
      path:path.resolve(__dirname,'./'),
      filename:'[name].[hash].bundle.js',
+     chunkFilename : '[name].[hash].bundle.js',
      publicPath: '/'
   },
   mode: 'development',

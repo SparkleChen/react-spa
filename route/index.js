@@ -1,6 +1,6 @@
 import Home from '../component/home/index.js';
-import Login from '../component/login/index.js';
 import Detail from '../component/detail/index.js';
+import { getAsyncComponent } from '../lib/asyncComponent.js';
 
 export default [
     {
@@ -16,6 +16,6 @@ export default [
     {
         name : '登录页',
         path : '/login',
-        component : Login
+        component : getAsyncComponent(() => import(/* webpackChunkName:"login" */'../component/login/index.js')) //路由动态加载组件
     }
 ];

@@ -1,5 +1,7 @@
-import React,{ Component } from 'react';
+import React,{ Component,createElement } from 'react';
 import { LinkTo } from '../LinkTo.js';
+
+
 
 export default class Login extends Component {
     constructor () {
@@ -7,10 +9,10 @@ export default class Login extends Component {
     }
     render () {
         return (
-            <>
-            <LinkTo/>
-            <div>Login</div>
-            </>
+            <div>
+                <LinkTo/>
+                <div>login</div>  
+            </div>
         )
     }
 }
