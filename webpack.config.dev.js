@@ -27,9 +27,6 @@ module.exports = merge(baseConfig,{
   }
   },
   devtool : 'source-map',
-  resolve: {
-      extensions: ['.css', '.js', '.jsx'],
-  },
   plugins:[
     new HtmlWebpackPlugin({
       template:'./index.html'

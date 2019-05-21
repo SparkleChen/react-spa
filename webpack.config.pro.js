@@ -12,13 +12,13 @@ module.exports = merge(baseConfig,{
        publicPath: '/'
     },
     mode: 'production',
-    resolve: {
-        extensions: ['.css', '.js', '.jsx'],
-    },
     plugins:[
       new HtmlWebpackPlugin({
         template:'./index.html'
       }),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('production')
+      })
   ],
   optimization: {
     splitChunks: {
